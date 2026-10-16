@@ -1,0 +1,40 @@
+name: Refresh Greek Digea artwork XMLTV
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 2,10,18 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: digea-artwork-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate generator
+        run: python -m unittest discover -s tests -v
+      - name: Generate XMLTV
+        run: python generate_epg.py --output epg --days 5
+      - name: Commit only a valid updated guide
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add epg/digea-artwork.xml epg/digea-artwork.xml.gz epg/status.json
+          if git diff --cached --quiet; then
+            echo "Guide unchanged"
+          else
+            git commit -m 'Refresh Digea Greek artwork EPG'
+            git push
+          fi
