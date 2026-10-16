@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - generate_epg.py
+      - official_artwork.py
       - tests/**
       - .github/workflows/update-digea.yml
   workflow_dispatch:
