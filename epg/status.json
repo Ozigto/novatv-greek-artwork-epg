@@ -1,18 +1,54 @@
 {
-  "generated_at": "2026-10-16T22:03:44.361813+03:00",
+  "generated_at": "2026-10-16T22:22:28.614188+03:00",
   "channels": 86,
   "programmes": 7830,
-  "programmes_with_artwork": 19,
+  "programmes_with_artwork": 85,
+  "programmes_with_artwork_by_source": {
+    "alpha": 49,
+    "digea_fallback": 11,
+    "open": 3,
+    "star": 22
+  },
   "matched_programme_titles": [
     "[K12] Μπλε Ώρες",
     "[K12] Ντέρτι",
     "[K12] Ντέρτι (Ε)",
+    "[K12] Οι Ιστορίες του Αστυνόμου Μπέκα, II (Ε)",
+    "[K12] Πρωταγωνιστές, V (Ε)",
+    "[K8] 1% Club",
     "[K8] 10 Παντού",
     "[K8] Deal",
     "[K8] GNTM 7",
     "[K8] GNTM 7 (Ε)",
+    "[K8] Happy Day στον Alpha, XIV",
+    "[K8] Stars System",
+    "[K8] Stars System (Ε)",
+    "[K8] Super Κατερίνα, VI",
+    "[K8] Ώρα Ελλάδος",
     "[K8] Δύο Μαύρα Πουκάμισα",
-    "[K8] Μπλε Ώρες"
+    "[K8] Μην Αρχίζεις τη Μουρμούρα, X (E)",
+    "[K8] Μπαμπά σ' Αγαπώ (Ε)",
+    "[K8] Μπλε Ώρες",
+    "[K8] Οικογενειακές Ιστορίες (Ε)",
+    "[K8] Πρώτος Καφές με τη Ζήνα",
+    "[K8] Το Σόι σου, I (Ε)",
+    "[K8] Το Σόι σου, II (Ε)",
+    "[K8] Το Σόι σου, VI",
+    "[K8] Το Σόι σου, VI (Ε)",
+    "[K8] Τροχός της Τύχης",
+    "[K8] Τροχός της Τύχης (Ε)",
+    "[K] Ένας Απένταρος Λεφτάς",
+    "[K] Θυρίδα Τηλεπώλησης"
   ],
-  "artwork_source": "Verified Digea promotional URLs; exact title matching"
+  "artwork_source": "Official Greek broadcaster programme images and Digea fallback; channel-scoped title matching",
+  "official_source_title_counts": {
+    "alpha": 12,
+    "star": 21,
+    "open": 9,
+    "ert1": 13,
+    "ert2": 15,
+    "ert3": 20,
+    "ertcosmos": 18
+  },
+  "official_source_errors": {}
 }
