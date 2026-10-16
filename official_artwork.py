@@ -18,6 +18,9 @@ from bs4 import BeautifulSoup
 UA = "Mozilla/5.0 (compatible; NovaTV-Greek-EPG/1.1; programme-artwork-test)"
 SOURCES = {
     "alpha": ("https://www.alphatv.gr/programma/",),
+    "mega": ("https://www.megatv.com/", "https://www.megatv.com/shows/"),
+    "ant1": ("https://www.antenna.gr/tv",),
+    "skai": ("https://www.skai.gr/tv/",),
     "star": ("https://www.star.gr/tv/programma",),
     "open": ("https://www.tvopen.gr/schedule",),
     "ert1": ("https://www.ert.gr/tv/program/ert1/",),
@@ -27,6 +30,9 @@ SOURCES = {
 }
 TRUSTED_IMAGE_HOSTS = {
     "alpha": ("alphatv.gr",),
+    "mega": ("megatv.com",),
+    "ant1": ("antenna.gr",),
+    "skai": ("skai.gr",),
     "star": ("star.gr",),
     "open": ("opentv-static.siliconweb.com", "tvopen.gr"),
     "ert1": ("ert.gr", "ertflix.gr"),
@@ -36,6 +42,9 @@ TRUSTED_IMAGE_HOSTS = {
 }
 CHANNEL_ALIASES = {
     "ALPHA": "alpha", "STAR": "star", "OPEN BEYOND": "open",
+    "MEGA": "mega", "MEGA CHANNEL": "mega",
+    "ANT1": "ant1", "ΑΝΤ1": "ant1",
+    "SKAI": "skai", "ΣΚΑΙ": "skai",
     "OPEN": "open", "ERT1": "ert1", "ΕΡΤ1": "ert1",
     "ERT2": "ert2", "ΕΡΤ2": "ert2", "ERT3": "ert3",
     "ΕΡΤ3": "ert3", "ERT COSMOS": "ertcosmos",
