@@ -15,6 +15,8 @@ from urllib.parse import urlencode, urljoin, urlsplit
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 from zoneinfo import ZoneInfo
+from collections import Counter
+import official_artwork
 
 TZ = ZoneInfo("Europe/Athens")
 BASE = "https://www.digea.gr"
@@ -121,17 +123,19 @@ def fmt(value: datetime) -> str:
 
 
 def build_xml(channels: list[dict], events: list[dict], art: dict[str, str],
-              now: datetime) -> tuple[bytes, dict]:
+              now: datetime, official_images: dict | None = None) -> tuple[bytes, dict]:
     tv = ET.Element("tv", {
         "date": fmt(now), "source-info-name": "Digea.gr (unofficial)",
         "generator-info-name": "NovaTV Greek Artwork EPG"})
     known = set()
+    channel_sources = {}
     for channel in channels:
         ident = str(channel.get("id") or "").strip()
         name = str(channel.get("name") or "").strip()
         if not ident or not name or ident in known:
             continue
         known.add(ident)
+        channel_sources[ident] = official_artwork.source_for_channel(name)
         el = ET.SubElement(tv, "channel", id="digea-" + ident)
         ET.SubElement(el, "display-name", lang="el").text = name
         for alias in ALIASES.get(name.upper(), ()):
@@ -159,6 +163,7 @@ def build_xml(channels: list[dict], events: list[dict], art: dict[str, str],
         prepared.append((ident, start, end, title, event))
 
     matched = 0
+    matched_by_source = Counter()
     matched_titles = set()
     visited = set()
     for ident, start, end, title, event in sorted(prepared, key=lambda e: (e[0], e[1])):
@@ -172,11 +177,20 @@ def build_xml(channels: list[dict], events: list[dict], art: dict[str, str],
         desc = event.get("long_synopsis") or event.get("synopsis")
         if desc:
             ET.SubElement(el, "desc", lang="el").text = str(desc)
-        image = art.get(normalize_title(title))
-        if image and valid_image(image):
+        source = channel_sources.get(ident)
+        image = (official_images or {}).get(source, {}).get(official_artwork.canonical(title))
+        if image:
             ET.SubElement(el, "icon", src=image)
             matched += 1
+            matched_by_source[source] += 1
             matched_titles.add(title)
+        else:
+            image = art.get(normalize_title(title))
+            if image and valid_image(image):
+                ET.SubElement(el, "icon", src=image)
+                matched += 1
+                matched_by_source["digea_fallback"] += 1
+                matched_titles.add(title)
 
     if not known or not visited:
         raise ValueError("No channel/programme data; refusing to publish an empty feed")
@@ -189,8 +203,9 @@ def build_xml(channels: list[dict], events: list[dict], art: dict[str, str],
         "channels": len(known),
         "programmes": len(visited),
         "programmes_with_artwork": matched,
+        "programmes_with_artwork_by_source": dict(matched_by_source),
         "matched_programme_titles": sorted(matched_titles),
-        "artwork_source": "Verified Digea promotional URLs; exact title matching",
+        "artwork_source": "Official Greek broadcaster programme images and Digea fallback; channel-scoped title matching",
     }
 
 
@@ -201,7 +216,10 @@ def generate(outdir: Path, days: int = 5) -> dict:
     for n in range(days):
         d = (now + timedelta(days=n)).date()
         events += api("get-events", {"action": "get_events", "date": f"{d.year}-{d.month}-{d.day}"})
-    xml, metadata = build_xml(channels, events, find_artwork(), now)
+    official = official_artwork.collect()
+    xml, metadata = build_xml(channels, events, find_artwork(), now, official.images)
+    metadata["official_source_title_counts"] = official.counts
+    metadata["official_source_errors"] = official.errors
     outdir.mkdir(parents=True, exist_ok=True)
     (outdir / "digea-artwork.xml").write_bytes(xml)
     (outdir / "digea-artwork.xml.gz").write_bytes(gzip.compress(xml, mtime=0))
