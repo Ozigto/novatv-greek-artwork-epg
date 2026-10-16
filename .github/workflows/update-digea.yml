@@ -1,6 +1,12 @@
 name: Refresh Greek Digea artwork XMLTV
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - generate_epg.py
+      - tests/**
+      - .github/workflows/update-digea.yml
   workflow_dispatch:
   schedule:
     - cron: '17 2,10,18 * * *'
