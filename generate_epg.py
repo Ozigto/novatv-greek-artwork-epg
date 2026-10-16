@@ -17,6 +17,7 @@ from xml.etree import ElementTree as ET
 from zoneinfo import ZoneInfo
 from collections import Counter
 import official_artwork
+import ert_schedule
 
 TZ = ZoneInfo("Europe/Athens")
 BASE = "https://www.digea.gr"
@@ -217,9 +218,16 @@ def generate(outdir: Path, days: int = 5) -> dict:
         d = (now + timedelta(days=n)).date()
         events += api("get-events", {"action": "get_events", "date": f"{d.year}-{d.month}-{d.day}"})
     official = official_artwork.collect()
+    ert_channels, ert_events, ert_images, ert_errors = ert_schedule.collect(days, now)
+    channels.extend(ert_channels)
+    events.extend(ert_events)
+    for source, pictures in ert_images.items():
+        official.images.setdefault(source, {}).update(pictures)
+        official.counts[source] = len(official.images[source])
     xml, metadata = build_xml(channels, events, find_artwork(), now, official.images)
     metadata["official_source_title_counts"] = official.counts
-    metadata["official_source_errors"] = official.errors
+    metadata["official_source_errors"] = dict(official.errors, **ert_errors)
+    metadata["ert_programmes_collected"] = len(ert_events)
     outdir.mkdir(parents=True, exist_ok=True)
     (outdir / "digea-artwork.xml").write_bytes(xml)
     (outdir / "digea-artwork.xml.gz").write_bytes(gzip.compress(xml, mtime=0))
