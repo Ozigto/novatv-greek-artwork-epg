@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-18T10:17:24.825729+03:00",
+  "generated_at": "2026-10-18T17:03:15.046435+03:00",
   "channels": 90,
-  "programmes": 8178,
-  "programmes_with_artwork": 446,
+  "programmes": 8177,
+  "programmes_with_artwork": 442,
   "programmes_with_artwork_by_source": {
     "alpha": 43,
     "digea_fallback": 12,
-    "skai": 6,
+    "skai": 5,
     "ant1": 21,
     "open": 2,
     "star": 19,
@@ -14,7 +14,7 @@
     "ertcosmos": 80,
     "ert1": 52,
     "ert2": 64,
-    "ert3": 100
+    "ert3": 97
   },
   "matched_programme_titles": [
     "360° Ρεπορτάζ",
@@ -70,7 +70,6 @@
     "[K8] Πες μου Ναι (Ε)",
     "[K8] Ποιος Θέλει να Γίνει Εκατομμυριούχος;",
     "[K8] Πρωταγωνιστές",
-    "[K8] Ρεπορτάζ στις 10",
     "[K8] Σαββατοκύριακο με τον Μάνεση, X",
     "[K8] Στο Παρά Πέντε (Ε)",
     "[K8] Τα Μυστικά της Εδέμ (Ε)",
@@ -142,7 +141,6 @@
     "Με Αρετή και Τόλμη",
     "Μετά τις Ειδήσεις",
     "Μικρά Πλάσματα της Ακτής",
-    "Μιλώντας για την Εμμηνόπαυση",
     "Μολάνγκ",
     "Μονόγραμμα",
     "Νωρίς  Νωρίς",
@@ -192,7 +190,6 @@
     "Τα Μυστικά της Μουσικής",
     "Τα Στέκια",
     "Το Αλάτι της Γης",
-    "Το Αλάτι της Γης – Ζ’ ΚΥΚΛΟΣ (2020-2021)",
     "Το Γέλιο Βγήκε απ’ τον Παράδεισο – Ελληνική Ταινία",
     "Τοπία από Ψηλά",
     "Φιλοξενούμενοι",
@@ -203,16 +200,16 @@
   "artwork_source": "Official Greek broadcaster programme images and Digea fallback; channel-scoped title matching",
   "official_source_title_counts": {
     "alpha": 13,
-    "mega": 91,
+    "mega": 93,
     "ant1": 75,
-    "skai": 8,
+    "skai": 7,
     "star": 39,
     "open": 11,
     "ert1": 29,
     "ert2": 40,
-    "ert3": 49,
+    "ert3": 48,
     "ertcosmos": 50
   },
   "official_source_errors": {},
-  "ert_programmes_collected": 296
+  "ert_programmes_collected": 295
 }
