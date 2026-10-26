@@ -1,25 +1,24 @@
 {
-  "generated_at": "2026-10-26T09:54:09.738145+02:00",
+  "generated_at": "2026-10-26T18:49:36.405203+02:00",
   "channels": 90,
-  "programmes": 8141,
-  "programmes_with_artwork": 470,
+  "programmes": 8061,
+  "programmes_with_artwork": 466,
   "programmes_with_artwork_by_source": {
     "alpha": 75,
-    "skai": 7,
     "digea_fallback": 9,
+    "skai": 2,
     "ant1": 17,
     "open": 5,
     "star": 24,
     "mega": 28,
     "ertcosmos": 78,
     "ert1": 53,
-    "ert2": 79,
+    "ert2": 80,
     "ert3": 95
   },
   "matched_programme_titles": [
     "#STArt",
     "24 Ώρες στην Ελλάδα",
-    "26,2 Μίλια Ζωή",
     "All-Round Champion",
     "Auto Moto ΕΡΤ",
     "Basket | Elite League | Κομοτηνή – ΑΓΕ Χαλκίδας | 6η Αγωνιστική",
@@ -60,7 +59,6 @@
     "[K8] The Chase",
     "[K8] Άσε μας ρε Μαμά (Ε)",
     "[K8] Ώρα Ελλάδος",
-    "[K8] Αταίριαστοι",
     "[K8] Δύο Μαύρα Πουκάμισα",
     "[K8] Ενώπιος Ενωπίω",
     "[K8] Μην Αρχίζεις τη Μουρμούρα, X (E)",
@@ -143,6 +141,7 @@
     "Παρέλαση της 28ης Οκτωβρίου",
     "Παρέλαση της 28ης Οκτωβρίου –  Απευθείας Μετάδοση από Θεσσαλονίκη",
     "Περίμετρος",
+    "Ποδόσφαιρο | League Cup Πορτογαλίας | Προημιτελικά | Μπενφίκα – Ζιλ Βιθέντε",
     "Ποδόσφαιρο | Superbet League 2 | Athens Kallithea – ΑΕΛ | 8η Αγωνιστική",
     "Ποδόσφαιρο | Superbet League 2 | Ζάκυνθος – Πύργος | 8η Αγωνιστική",
     "Ποδόσφαιρο | Superbet League 2 | Πανιώνιος – Μαρκό | 8η Αγωνιστική",
@@ -182,7 +181,7 @@
   "official_source_title_counts": {
     "alpha": 14,
     "mega": 119,
-    "ant1": 75,
+    "ant1": 73,
     "skai": 8,
     "star": 24,
     "open": 8,
@@ -192,5 +191,5 @@
     "ertcosmos": 41
   },
   "official_source_errors": {},
-  "ert_programmes_collected": 305
+  "ert_programmes_collected": 306
 }
