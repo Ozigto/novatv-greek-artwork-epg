@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-28T10:42:15.352204+02:00",
+  "generated_at": "2026-10-28T18:42:59.439304+02:00",
   "channels": 90,
   "programmes": 7893,
-  "programmes_with_artwork": 449,
+  "programmes_with_artwork": 446,
   "programmes_with_artwork_by_source": {
     "alpha": 59,
-    "skai": 6,
     "digea_fallback": 6,
+    "skai": 3,
     "ant1": 15,
     "open": 3,
     "star": 18,
@@ -75,7 +75,6 @@
     "[K8] The Voice of Greece Powered by Telekom",
     "[K8] Άσε μας ρε Μαμά (Ε)",
     "[K8] Ώρα Ελλάδος",
-    "[K8] Αταίριαστοι",
     "[K8] Δύο Μαύρα Πουκάμισα",
     "[K8] Ενώπιος Ενωπίω",
     "[K8] Εξελίξεις Τώρα",
@@ -235,7 +234,7 @@
   "official_source_title_counts": {
     "alpha": 15,
     "mega": 122,
-    "ant1": 72,
+    "ant1": 71,
     "skai": 8,
     "star": 24,
     "open": 8,
