@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T11:22:43.549605+02:00",
+  "generated_at": "2026-11-01T18:50:32.373232+02:00",
   "channels": 91,
   "programmes": 8149,
   "programmes_with_artwork": 438,
@@ -72,7 +72,6 @@
     "[K8] Νταντά της Γειτονιάς",
     "[K8] Νταντά της Γειτονιάς (Ε)",
     "[K8] Οικογενειακές Ιστορίες (Ε)",
-    "[K8] Ρεπορτάζ στις 10",
     "[K8] Σαββατοκύριακο με τον Μάνεση, X",
     "[K8] Σπίτι Είναι... (Ε)",
     "[K8] Τα Μυστικά της Εδέμ (Ε)",
@@ -89,6 +88,7 @@
     "[K] PJ Masks: Power Heroes",
     "[K] Rainbow Bubblegem",
     "[K] Scooby-Doo! Mystery Incorporated",
+    "[K] Stoiximan GBL 2026-27: Άρης - Παναθηναϊκός AKTOR",
     "[K] The Weasy Family",
     "[K] Tom and Jerry Show",
     "[K] Η Ωραία του Κουρέα",
@@ -198,8 +198,8 @@
   "artwork_source": "Official Greek broadcaster programme images and Digea fallback; channel-scoped title matching",
   "official_source_title_counts": {
     "alpha": 12,
-    "mega": 124,
-    "ant1": 77,
+    "mega": 123,
+    "ant1": 75,
     "skai": 8,
     "star": 39,
     "open": 11,
