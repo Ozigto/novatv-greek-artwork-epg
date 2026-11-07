@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-07T10:54:30.186424+02:00",
+  "generated_at": "2026-11-07T18:30:37.459923+02:00",
   "channels": 91,
   "programmes": 8156,
-  "programmes_with_artwork": 477,
+  "programmes_with_artwork": 475,
   "programmes_with_artwork_by_source": {
     "alpha": 62,
     "digea_fallback": 13,
-    "skai": 9,
+    "skai": 7,
     "ant1": 16,
     "open": 4,
     "star": 27,
@@ -80,7 +80,6 @@
     "[K8] Νταντά της Γειτονιάς",
     "[K8] Οικογενειακές Ιστορίες (Ε)",
     "[K8] Πρωταγωνιστές",
-    "[K8] Ρεπορτάζ στις 10",
     "[K8] Σαββατοκύριακο με τον Μάνεση, X",
     "[K8] Σπίτι Είναι... (Ε)",
     "[K8] Τα Μυστικά της Εδέμ (Ε)",
@@ -229,7 +228,7 @@
   "official_source_title_counts": {
     "alpha": 13,
     "mega": 123,
-    "ant1": 70,
+    "ant1": 69,
     "skai": 8,
     "star": 37,
     "open": 10,
