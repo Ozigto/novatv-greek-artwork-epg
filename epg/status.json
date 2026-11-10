@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-11-10T11:59:14.367472+02:00",
+  "generated_at": "2026-11-10T19:56:42.767290+02:00",
   "channels": 91,
-  "programmes": 8126,
-  "programmes_with_artwork": 492,
+  "programmes": 8068,
+  "programmes_with_artwork": 488,
   "programmes_with_artwork_by_source": {
     "alpha": 67,
-    "skai": 7,
     "digea_fallback": 8,
+    "skai": 3,
     "ant1": 14,
     "open": 4,
     "star": 32,
-    "mega": 36,
+    "mega": 37,
     "ertcosmos": 83,
     "ert1": 54,
-    "ert2": 78,
+    "ert2": 77,
     "ert3": 109
   },
   "matched_programme_titles": [
@@ -54,6 +54,7 @@
     "[K12] Κρίνο και Αγκάθι",
     "[K12] Μπλε Ώρες",
     "[K12] Ντέρτι",
+    "[K12] Σύγκρουση (Ε)",
     "[K12] Το Νησί (Ε)",
     "[K12] Φως στο Τούνελ",
     "[K16] Maestro (Ε)",
@@ -68,7 +69,6 @@
     "[K8] Happy Day στον Alpha, XIV",
     "[K8] Kitchen Lab",
     "[K8] Live News",
-    "[K8] Live You",
     "[K8] Mega Non Stop",
     "[K8] Mega Stories",
     "[K8] Mega Σαββατοκύριακο",
@@ -150,7 +150,6 @@
     "Μολάνγκ",
     "Μουσική Παντού",
     "Νωρίς  Νωρίς",
-    "Ξένο Ντοκιμαντέρ",
     "Ο Κόσμος των Σπορ",
     "Ο Πύργος του Ντάουντον",
     "Ο Τελευταίος Χορός",
@@ -213,15 +212,15 @@
   "official_source_title_counts": {
     "alpha": 13,
     "mega": 125,
-    "ant1": 70,
+    "ant1": 69,
     "skai": 8,
     "star": 23,
     "open": 10,
-    "ert1": 30,
-    "ert2": 40,
+    "ert1": 29,
+    "ert2": 39,
     "ert3": 53,
     "ertcosmos": 49
   },
   "official_source_errors": {},
-  "ert_programmes_collected": 324
+  "ert_programmes_collected": 323
 }
