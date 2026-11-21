@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-21T11:56:39.864865+02:00",
+  "generated_at": "2026-11-21T19:37:38.662225+02:00",
   "channels": 90,
   "programmes": 7507,
-  "programmes_with_artwork": 471,
+  "programmes_with_artwork": 469,
   "programmes_with_artwork_by_source": {
     "alpha": 57,
     "digea_fallback": 14,
-    "skai": 6,
+    "skai": 4,
     "ant1": 17,
     "open": 4,
     "star": 25,
@@ -79,7 +79,6 @@
     "[K8] Ντόλτσε Βίτα (Ε)",
     "[K8] Οι Κόρες της Αρετής",
     "[K8] Οικογενειακές Ιστορίες (Ε)",
-    "[K8] Ρεπορτάζ στις 10",
     "[K8] Σαββατοκύριακο με τον Μάνεση, X",
     "[K8] Σπίτι Είναι... (Ε)",
     "[K8] Στο Παρά Πέντε (Ε)",
@@ -241,7 +240,7 @@
   "official_source_title_counts": {
     "alpha": 13,
     "mega": 101,
-    "ant1": 63,
+    "ant1": 67,
     "skai": 6,
     "star": 37,
     "open": 10,
